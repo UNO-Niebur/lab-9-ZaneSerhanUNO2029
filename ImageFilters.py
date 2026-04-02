@@ -4,7 +4,7 @@
 # Assignment:
 
 
-from PIL import Image
+from PIL import Image 
 
 
 def swapGreenBlue(img):
@@ -17,7 +17,7 @@ def swapGreenBlue(img):
 
     for x in range(width):
         for y in range(height):
-            red, green, blue = pixels[x, y]
+            red, green, blue, alpha = pixels[x, y]
             pixels[x, y] = (red, blue, green)
 
     img.save("swapGB.png")
@@ -43,7 +43,7 @@ def bwFilter(img):
 
     for x in range(width):
         for y in range(height):
-            red, green, blue = pixels[x, y]
+            red, green, blue, alpha = pixels[x, y]
             avg = (red + green + blue) // 3
             pixels[x, y] = (avg, avg, avg)
 
@@ -53,12 +53,13 @@ def bwFilter(img):
 def main():
     # Open the image file
     myImg = Image.open("durango.png")
+   
 
     # Example (already completed)
-    bwFilter(myImg)
+    #bwFilter(myImg)
 
     # Uncomment each function as you complete it
-    #swapGreenBlue(myImg)
+    swapGreenBlue(myImg)
     # darken(myImg, 20)
 
 
