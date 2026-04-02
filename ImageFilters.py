@@ -3,6 +3,7 @@
 # Date:
 # Assignment:
 
+
 from PIL import Image
 
 
@@ -13,6 +14,11 @@ def swapGreenBlue(img):
     width, height = img.size
 
     # TODO: Loop through every pixel and swap green and blue values
+
+    for x in range(width):
+        for y in range(height):
+            red, green, blue = pixels[x, y]
+            pixels[x, y] = (red, blue, green)
 
     img.save("swapGB.png")
 
@@ -49,10 +55,10 @@ def main():
     myImg = Image.open("durango.png")
 
     # Example (already completed)
-    # bwFilter(myImg)
+    bwFilter(myImg)
 
     # Uncomment each function as you complete it
-    # swapGreenBlue(myImg)
+    #swapGreenBlue(myImg)
     # darken(myImg, 20)
 
 
