@@ -63,11 +63,11 @@ def main():
    
 
     # Example (already completed)
-    bwFilter(myImg)
+    #bwFilter(myImg)
 
     # Uncomment each function as you complete it
     #swapGreenBlue(myImg)
-    #darken(myImg, 200)
+    darken(myImg, 200)
 
 
 if __name__ == "__main__":
